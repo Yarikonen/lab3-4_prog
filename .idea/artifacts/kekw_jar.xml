@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="kekw:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/kekw_jar</output-path>
+    <root id="archive" name="kekw.jar">
+      <element id="module-output" name="kekw" />
+    </root>
+  </artifact>
+</component>

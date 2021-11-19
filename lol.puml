@@ -1,0 +1,116 @@
+@startuml
+abstract class item {
+- String name
+- destr Type
+- String condition
++ <<Create>> item(String,destr)
++ String get_name()
++ boolean equals(Object)
++ void set_condition()
++ String get_condition()
++ String toString()
++ int hashCode()
+}
+enum destr{
+СЛОМАН,
+    ИСКРОМСАН,
+    ИСПОЛЬЗОВАН,
+    ПУСТ,
+    ПОМЯТ,
+    РАЗРУШЕН,
+    ОБГОРЕВШИЙ,
+    ОТКРЫТ
+}
+abstract class person {
+- String name
+- int age
++ <<Create>> person(String)
++ <<Create>> person(String,int)
++ String toString()
++ String get_name()
++ void prints()
++ void walks()
++ String get_age()
++ void talks()
++ boolean equals(Object)
++ int hashCode()
+}
+interface surroundings {
+~ void surround()
+}
+interface printable {
+~ void prints()
+}
+class Lake {
+~ <<Create>> Lake()
++ void talks()
+}
+class Main {
++ {static} void main(String[])
+}
+class lagerix {
+- String owner
+- String ownerprof
+~ <<Create>> lagerix()
++ void surround()
++ boolean equals(Object)
++ int hashCode()
++ void prints()
++ String get_owner()
+}
+class metal_can {
++ <<Create>> metal_can()
++ void prints()
+}
+class matches {
++ <<Create>> matches()
++ void prints()
+}
+class Gedni {
+~ <<Create>> Gedni()
++ void crazy_things()
++ void talks()
++ String toString()
+}
+abstract class place {
+- String type
+- String curr
++ <<Create>> place(String)
++ <<Create>> place(String,String)
++ void prints()
++ String get_name()
++ String get_sost()
++ boolean equals(Object)
++ int hashCode()
++ String toString()
+}
+class Бумага {
++ <<Create>> Бумага()
++ void prints()
+}
+class battery {
++ <<Create>> battery()
++ void prints()
+}
+interface crazy {
+~ void crazy_things()
+}
+
+
+printable <|.. item
+destr <|.. item
+person <|-- Lake
+surroundings <|.. lagerix
+place <|-- lagerix
+printable <|.. metal_can
+item <|-- metal_can
+printable <|.. matches
+item <|-- matches
+crazy <|.. Gedni
+person <|-- Gedni
+printable <|.. place
+printable <|.. Бумага
+item <|-- Бумага
+printable <|.. battery
+item <|-- battery
+@enduml
