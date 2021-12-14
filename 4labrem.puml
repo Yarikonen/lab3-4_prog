@@ -1,0 +1,178 @@
+@startuml
+class Denfort {
++ void walks()
++ void talks()
+}
+abstract class person {
+- String name
+- int age
++ String toString()
++ String get_name()
++ {abstract}void walks()
++ String get_age()
++ {abstract}void talks()
++ boolean equals(Object)
++ int hashCode()
+}
+class author {
+~ {static} int madness
++ void walks()
++ void talks()
++ void staystrong()
+}
+class author.view {
+- {static} String supermad()
+- {static} String notmad()
+- {static} String okmad()
++ {static} void howmad()
+}
+class fear {
+- String fear_confirmed()
+- void morefear()
+- void although()
+- String paralize()
+}
+class curiosity {
+- String curiosityleadus(String)
+}
+class can {
++ void prints()
++ void usable(String)
+}
+interface printable {
+~ void prints()
+}
+class Lake {
++ void walks()
++ void talks()
+}
+class lagerix {
+- String owner
+- String ownerprof
++ void surround()
++ boolean equals(Object)
++ int hashCode()
++ void prints()
++ String get_owner()
+}
+class matches {
++ void prints()
++ void fire(String)
+}
+class OutOfDegrees {
+- int direct
+- String msg
++ String getMessage()
++ int get_degrees()
+}
+abstract class place {
+- String type
+- String curr
++ void prints()
++ String get_name()
++ String get_sost()
++ boolean equals(Object)
++ int hashCode()
++ String toString()
+}
+class MadnessOutOfRange {
+}
+class tent {
++ void prints()
++ void zhiv(boolean)
+}
+interface dosmth {
+~ void usable(String)
+}
+abstract class item {
+- String name
+- destr Type
+- String condition
++ String get_name()
++ boolean equals(Object)
+- void set_condition()
++ String get_condition()
++ String toString()
++ int hashCode()
+}
+class фонарь {
+~ {static} int k
++ void prints()
++ void usable(String)
++ void where()
+}
+class coridor {
+~ String direct
++ void prints()
++ void surround()
++ void choose(int)
+}
+class coridor.door {
++ void prints()
++ void secret()
++ void enter()
+}
+interface surroundings {
+~ void surround()
+}
+class Main {
++ {static} void main(String[])
+}
+class metal_can {
++ void prints()
++ void notfunny(String)
+}
+class Gedni {
++ void crazy_things()
++ void talks()
++ String toString()
++ String getname()
++ void walks()
++ void draws()
+}
+class plan {
++ void prints()
+- void copy(String)
+- void helping()
+}
+class Бумага {
++ void prints()
++ void show(Boolean)
+}
+class battery {
++ void prints()
++ void discharded()
+}
+interface crazy {
+~ void crazy_things()
+}
+Gedni   +.. plan
+author +.. curiosity
+author +.. fear
+person <|-- Denfort
+person <|-- author
+author +.. author.view
+dosmth <|.. can
+item <|-- can
+person <|-- Lake
+surroundings <|.. lagerix
+place <|-- lagerix
+item <|-- matches
+java.io.IOException <|-- OutOfDegrees
+printable <|.. place
+RuntimeException <|-- MadnessOutOfRange
+item <|-- tent
+printable <|.. item
+dosmth <|.. фонарь
+item <|-- фонарь
+surroundings <|.. coridor
+place <|-- coridor
+coridor +.. coridor.door
+item <|-- coridor.door
+item <|-- metal_can
+crazy <|.. Gedni
+person <|-- Gedni
+item <|-- plan
+item <|-- Бумага
+item <|-- battery
+@enduml

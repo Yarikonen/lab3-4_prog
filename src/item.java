@@ -44,6 +44,9 @@ public abstract class item implements printable {
             case РАЗРУШЕН:
                 condition = "рузрушен";
                 break;
+            case ИСПРАВЕН:
+                condition="исправный";
+                break;
 
         }
 

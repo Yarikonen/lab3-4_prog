@@ -1,4 +1,4 @@
-public class tent extends item implements printable {
+public class tent extends item {
     public tent(){
         super("палатка",destr.ИСКРОМСАН);
 

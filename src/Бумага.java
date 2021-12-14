@@ -1,4 +1,4 @@
-public class Бумага extends item implements printable {
+public class Бумага extends item {
     public Бумага() {
         super("бумага", destr.ПОМЯТ);
     }

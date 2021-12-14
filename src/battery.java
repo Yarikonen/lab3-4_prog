@@ -1,4 +1,4 @@
-public class battery extends item implements printable {
+public class battery extends item {
     public battery(){
         super("электрическая баттарея", destr.ИСПОЛЬЗОВАН);
     }

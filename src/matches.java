@@ -1,4 +1,4 @@
-public class matches extends item implements printable{
+public class matches extends item {
     public matches(){
         super("спички",destr.ОБГОРЕВШИЙ);
 

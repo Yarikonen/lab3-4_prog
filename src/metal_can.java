@@ -1,4 +1,4 @@
-public class metal_can extends item implements printable {
+public class metal_can extends item {
     public metal_can(){
         super("банка", destr.ОТКРЫТ);
     }

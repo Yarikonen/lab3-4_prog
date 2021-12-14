@@ -1,4 +1,4 @@
-public class can extends item implements printable {
+public class can extends item implements dosmth  {
     public can(){
         super("пузырек из под чернил",destr.ПУСТ);
 
